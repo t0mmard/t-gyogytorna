@@ -1,0 +1,64 @@
+<div class="main-div">
+  <mat-card class="center-content card">
+    <mat-card-title class="card-title">Időpontfoglalás</mat-card-title>
+    <mat-card-content class="content">
+      <p>
+        Időpontfoglalás csak előre egyeztetés alapján telefonon vagy emailen
+        keresztül.
+      </p>
+      <p>
+        Telefonos időpontfoglalás
+        <strong>minden hétköznap 12:00-20:00</strong> között lehetséges. Kérem
+        ezt figyelembe venni!
+      </p>
+      <p class="contact">
+        <mat-icon
+          aria-hidden="mail"
+          aria-label="mail icon"
+          fontIcon="mail"
+        ></mat-icon>
+        <strong>eviterapia&#64;gmail.com</strong>
+      </p>
+      <p class="contact">
+        <mat-icon
+          aria-hidden="phone"
+          aria-label="home icon"
+          fontIcon="phone"
+        ></mat-icon>
+        <strong>+36 30 600 9769</strong>
+      </p>
+      <div>
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+          <mat-form-field appearance="outline">
+            <mat-label for="name">Név</mat-label>
+            <input id="name" formControlName="name" type="text" required matInput>
+            @if (contactForm.get('name')?.invalid) {
+              <mat-error>{{nameError()}}</mat-error>
+            }
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label for="email">Email</mat-label>
+            <input id="email" formControlName="email" type="text" required matInput>
+            @if (contactForm.get('email')?.invalid) {
+              <mat-error>{{emailError()}}</mat-error>
+            }
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label for="message">Üzenet</mat-label>
+            <textarea id="message" formControlName="message" type="text" required matInput></textarea>
+            @if (contactForm.get('message')?.invalid) {
+              <mat-error>{{messageError()}}</mat-error>
+            }
+          </mat-form-field>
+          <button mat-stroked-button class="link-button" type="submit"  [disabled]="contactForm.invalid">
+            <strong>Küldés</strong></button
+          >
+        </form>
+
+        <p *ngIf="statusMessage" [ngClass]="statusClass">
+          {{ statusMessage }}
+        </p>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,0 +1,26 @@
+<div class="main-div">
+  <mat-card class="center-content card">
+    <mat-card-title class="card-title">Árak</mat-card-title>
+    <mat-card-content class="card-content">
+      <table mat-table [dataSource]="dataSource" class="myTable">
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef>Alkalom</th>
+          <td mat-cell class="cell" *matCellDef="let element">{{ element.name }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="length">
+          <th mat-header-cell *matHeaderCellDef>Időtartam</th>
+          <td mat-cell class="cell" *matCellDef="let element">{{ element.length }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="price">
+          <th mat-header-cell *matHeaderCellDef>Ár</th>
+          <td mat-cell class="cell" *matCellDef="let element">{{ element.price }}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+    </mat-card-content>
+  </mat-card>
+</div>

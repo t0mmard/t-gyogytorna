@@ -1,0 +1,40 @@
+.bottom-toolbar {
+  box-shadow: none;
+  background-color: #00b4d8;
+  padding-top:1%;
+}
+
+.mat-icon {
+  margin-left: 1%;
+}
+
+.container {
+  margin-bottom: 0;
+  height: 10%;
+}
+
+.divider-vertical {
+  width: 1px;
+  height: 30%;
+  margin: 0 10px;
+  background-color: #f5ffff;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  color: #f5ffff;
+  font-size: small;
+}
+
+strong {
+  margin-left: 1%;
+}
+
+.bottom-info {
+  padding-bottom: 1%;
+}
+
+.above-spacer {
+  display: flex;
+}

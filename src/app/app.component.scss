@@ -1,0 +1,28 @@
+.content {
+  margin-left: 3em;
+  margin-right: 3em;
+  margin: auto 0;
+  box-shadow: 0 0 15px 8px rgba(0, 0, 0, 0.3) inset;
+  min-height: 80vh;
+}
+
+.header {
+  min-height: 10vh;
+}
+
+.footer {
+  min-height: 10vh;
+}
+
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    width: 100vw;
+  }
+}

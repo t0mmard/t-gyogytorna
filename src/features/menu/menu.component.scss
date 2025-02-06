@@ -1,0 +1,93 @@
+@use "@angular/material" as mat;
+
+.top-toolbar {
+  box-shadow: none;
+  background-color: #00b4d8 !important;
+}
+
+.divider-vertical {
+  width: 1px;
+  height: 30%;
+  margin: 0 10px;
+  background-color: #f5ffff;
+}
+
+.divider-horizontal {
+  display: flex;
+  width: 98%; /* 70% of the container's width */
+  height: 2px; /* The thickness of the divider */
+  align-items: center;
+  background-color: #f5ffff; /* Color of the divider */
+  margin: 0px auto; /* Centering the divider horizontally */
+}
+
+.divider-bg {
+  background-color: #00b4d8;
+}
+
+.mat-toolbar.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #00b4d8;
+}
+
+.mat-toolbar * {
+  color: #f5ffff;
+  border-width: 0;
+  @include mat.button-toggle-overrides(
+    (
+      selected-state-background-color: #03045e,
+      disabled-selected-state-text-color: #f5ffff,
+      disabled-selected-state-background-color: #03045e,
+    )
+  );
+}
+
+.menu-button {
+  background-color: #00b4d8;
+  margin-left: auto;
+  display: inline-block; /*or inline works as well*/
+  position: absolute;
+  right: 1%;
+  box-shadow: 0 0 0 !important;
+}
+
+::ng-deep .mat-mdc-menu-content {
+  background-color: #00b4d8;
+  font-weight: bold;
+}
+
+.menu-item-button {
+  color: #f5ffff;
+  font-weight: bold;
+}
+
+.title-button {
+  line-height: 20%;
+  height: 90%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.name {
+  font-size: 2em;
+}
+
+.contact {
+  font-size: small;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .top-toolbar {
+    display: none;
+  }
+
+  .divider-bg {
+    display: none;
+  }
+}

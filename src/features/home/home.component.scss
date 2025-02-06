@@ -1,0 +1,247 @@
+@use "@angular/material" as mat;
+
+.main-div {
+  margin-top: 1.2em;
+}
+
+.main-div * {
+  letter-spacing: 1.5px;
+}
+
+.card1 {
+  margin-top: 1%;
+  margin-bottom: 3.5em;
+  margin-left: 1em;
+  padding: 20px;
+  max-width: 40em;
+  background-color: #00b4d8;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.card1 * {
+  flex: 1;
+  color: #f5ffff;
+}
+
+.card-title {
+  margin-bottom: 1em;
+  font-size: 2em;
+}
+
+.card2 {
+  margin-top: 1%;
+  margin-bottom: 3.5em;
+  padding: 20px;
+  max-width: 50em;
+  background-color: #00b4d8;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.3);
+}
+
+.card2 * {
+  color: #f5ffff;
+}
+
+
+p {
+  text-align: justify!important;
+}
+
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button-container {
+  width: 100%;
+}
+
+.link-button {
+  width: 100%; /* Buttons take full width of the container */
+  margin-bottom: 10px; /* Space between vertically stacked buttons */
+  box-sizing: border-box; /* Include padding and border in width */
+  border-color: #f5ffff;
+  height: 2.5em;
+  transition: transform 0.15s ease-in-out;
+}
+
+.link-button:hover {
+  transform: scale(1.025);
+}
+
+.last-row {
+  display: flex;
+  flex-wrap: wrap; /* Allows buttons to wrap when space is insufficient */
+  justify-content: center;
+  gap: 10px; /* Space between the last two buttons when side by side */
+  width: 100%; /* Ensure it takes full width of the container */
+}
+
+.last-row .link-button {
+  flex: 1 1 calc(50% - 5px); /* Each button takes 50% of the row minus gap */
+  max-width: calc(50%); /* Prevent exceeding 50% of the row */
+  white-space: nowrap; /* Prevent text wrapping */
+  text-align: center; /* Center the text for consistent appearance */
+}
+
+@media (max-width: 768px) {
+  .last-row .link-button {
+    flex: 1 1 calc(100%); /* Each button takes 50% of the row minus gap */
+    max-width: calc(100%); /*llow the buttons to take full width when stacked */
+    margin-bottom: 0px;
+  }
+
+  .card {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* Ensure it takes full width of the container */
+  max-width: 40em; /* Optional: Set a max width for consistent layout */
+  margin: 0 auto; /* Center the group within its parent container */
+}
+
+.button-group br {
+  display: none; /* Alternatively, use this to remove the space from <br /> */
+}
+
+.button-group .link-button:last-child {
+  margin-bottom: 0; /* Remove margin from the last vertically stacked button */
+}
+
+.image-container {
+  width: 13em;
+  height: 13em;
+  margin-bottom: 16px;
+}
+
+.circle-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 6px solid #01c1e7;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
+  transition: transform 0.15s ease-in-out;
+}
+
+.circle-image:hover {
+  transform: scale(1.025);
+
+  transition: transform 0.15s ease-in-out;
+}
+
+p,
+h2 {
+  font-family: poirot;
+}
+
+p {
+  text-align: left;
+}
+
+.text-with-image {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 5px;
+  font-size: 1em;
+}
+
+@media (max-width: 768px) {
+  .text-with-image {
+    grid-template-columns: 1fr;
+  }
+
+  .slider_container {
+    display: none!important;
+  }
+}
+//image slide
+.slider_container {
+  margin-left: 1em;
+  position: relative;
+  width: 10rem;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 4em;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 6px solid #01c1e7;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.3);
+}
+.slider {
+  margin: auto;
+  width: 15rem;
+  height: 15rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  animation: 30s cubic-bezier(1, 0.95, 0.565, 1) sliding infinite;
+}
+.slide {
+  position: relative;
+  min-width: 100%;
+  height: 100%;
+}
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slide.one {
+  background: rgb(182, 19, 109);
+}
+.slide.two {
+  background: rgb(255, 64, 64);
+}
+.slide.three {
+  background: rgb(11, 173, 188);
+}
+.slide.four {
+  background: rgb(11, 188, 14);
+}
+@keyframes sliding {
+  0% {
+    transform: translateX(0%);
+  }
+  19% {
+    transform: translateX(0%);
+  }
+  24% {
+    transform: translateX(-100%);
+  }
+  43% {
+    transform: translateX(-100%);
+  }
+  48% {
+    transform: translateX(-200%);
+  }
+  66% {
+    transform: translateX(-200%);
+  }
+  71% {
+    transform: translateX(-300%);
+  }
+  95% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(-400%);
+  }
+}
+
