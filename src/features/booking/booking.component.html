@@ -30,7 +30,7 @@
             }
           </mat-form-field>
           <mat-form-field appearance="outline">
-            <mat-label for="message">Üzenet</mat-label>
+            <mat-label for="message">Hogyan segíthetek? Kérem, írja le röviden.</mat-label>
             <textarea id="message" formControlName="message" type="text" required matInput></textarea>
             @if (contactForm.get('message')?.invalid) {
               <mat-error>{{messageError()}}</mat-error>
