@@ -9,9 +9,9 @@ export interface PriceElement {
 }
 
 const PRICES_DATA: PriceElement[] = [
-  {name: "Első alkalom: Vizsgálat + kezelés", length: "60-90 perc", price: "13.000 Ft"},
-  {name: "Egyéni felnőttgyógytorna kezelés", length: "50 perc", price: "13.000 Ft"},
-  {name: "Egyéni gyermekgyógytorna kezelés", length: "45-50 perc", price: "13.000 Ft"}
+  {name: "Első alkalom: Vizsgálat + kezelés", length: "60-90 perc", price: "15.000 Ft"},
+  {name: "Egyéni felnőttgyógytorna kezelés", length: "50 perc", price: "15.000 Ft"},
+  {name: "Egyéni gyermekgyógytorna kezelés", length: "45-50 perc", price: "15.000 Ft"}
 ];
 
 @Component({
